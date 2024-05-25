@@ -1,0 +1,259 @@
+# Page settings
+
+baseurl = "http://example.org/"
+languageCode = "en-us"
+title = "Gergo Nochta curriculum vitae"
+theme = "themes/hugo-orbit-theme"
+themesDir = "."
+staticDir = "static"
+googleAnalytics = "UA-XXXXXXX-Y"
+
+# Do not build files for websites. Need them? Set to false
+disableRSS = true
+disableSitemap = true
+disable404 = true
+
+[params]
+
+# Meta
+    description = "Gergo Nochta curriculum vitae"
+    author = "Gergo Nochta"
+
+# Theme styles
+
+    # The original template comes with 6 colour schemes. You may choose styles below.
+    # "styles.css", "styles-2.css", "styles-3.css", "styles-4.css", "styles-5.css", "styles-6.css"
+    # are available. Also the source LESS files are included so
+    # it’s quick and easy to change the styling and colour scheme.
+
+    styles = "styles.css"
+
+# Sidebar sections
+
+    # Profile section
+    [params.profile]
+        name = "Gergő Nochta"
+        tagline = "Software Engineer"
+        avatar = "profile.jpg"
+
+    # Contact section
+    [params.contact]
+        enable = true
+
+        [[params.contact.list]]
+        class = "email"
+        icon = "fa-envelope"
+        url = "mailto: gergo.nochta@gmail.com"
+        title = "gergo.nochta@gmail.com"
+
+        [[params.contact.list]]
+        class = "phone"
+        icon = "fa-phone"
+        url = "tel:+36304914060"
+        title = "+36 30 491 4060"
+
+#        [[params.contact.list]]
+#        class = "website"
+#        icon = "fa-globe"
+#        url = "//portfoliosite.com"
+#        title = "portfoliosite.com"
+
+        [[params.contact.list]]
+        class = "linkedin"
+        icon = "fa-linkedin"
+        url = "//linkedin.com/in/gergő-nochta-1403721a"
+        title = "linkedin.com/in/gergo-nochta"
+
+        [[params.contact.list]]
+        class = "github"
+        icon = "fa-github"
+        url = "//github.com/chege54"
+        title = "github.com/chege54"
+
+#        [[params.contact.list]]
+#        class = "twitter"
+#        icon = "fa-twitter"
+#        url = "//twitter.com/username"
+#        title = "@twittername"
+
+    # Education section
+    [params.education]
+        enable = true
+        title = "Education"
+
+        [[params.education.list]]
+        degree = "Master's Degree in Automotive Mechatronics"
+        college = "Budapest University of Technology and Economics"
+        dates = "2014 - 2016"
+
+        [[params.education.list]]
+        degree = "Bachelor's Degree in Optomechatronics"
+        college = "Budapest University of Technology and Economics"
+        dates = "2010 - 2014"
+
+        [[params.education.list]]
+        degree = "Secondary Grammar School"
+        college = "Ciszterci Szent István Secondary Grammar School - Székesfehérvár"
+        dates = "2002 - 2010"
+
+    # Languages section
+    [params.language]
+        enable = true
+        title = "Languages"
+
+        [[params.language.list]]
+        language = "Hungarian"
+        level = "Native"
+
+        [[params.language.list]]
+        language = "English"
+        level = "Professional"
+
+
+    # References section
+    [params.references]
+        enable = false
+        title = "References"
+
+        [[params.references.list]]
+        name = "Contact Name"
+        email = "contact@gmail.com"
+        phone = "+00 000 0000000"
+
+        [[params.references.list]]
+        name = "Contact Name"
+        email = "contact@gmail.com"
+        phone = "+00 000 0000000"
+
+
+    # Interests section
+    [params.interests]
+        enable = true
+        title = "Interests"
+
+        [[params.interests.list]]
+        interest = "3D printing"
+
+        [[params.interests.list]]
+        interest = "Drones"
+
+        [[params.interests.list]]
+        interest = "Workout, running"
+
+
+    # Downloads section
+    [params.downloads]
+        enable = true
+        title = "Downloads"
+
+        [[params.downloads.list]]
+        name = "CV / Resume"
+        icon = "fa-file-pdf-o"
+        filepath = "path/resume.pdf"
+
+
+# Main body sections
+
+    # You may use markdown in summary, details and intro fields. But don't overdose, it's resume!:)
+
+    # Summary section
+    [params.summary]
+        enable = true
+        icon = "fa-user"
+        title = "Career Profile"
+        summary = "I am having **8 years experience** in automotive **C/C++** embedded software development. I have experience with scripting languages like **Python** for task automation and test application development. I am having strong knowledge in C++ language, libraries, data structures, algorithms and protocols. Experience in SW-design, development, debugging, bug-fixing and profiling applications for embedded platforms. Besides of software development, I'm also interested in **cyber security, 3D printing, modelling and DIY electronics.** I've been working in a multinational environment at all my workplaces. "
+
+    # Experiences section
+    [params.experiences]
+        enable = true
+        icon = "fa-briefcase"
+        title = "Experiences"
+
+        [[params.jobs.list]]
+        position = "Software Engineer, Architect"
+        dates = "May 2016 - present"
+        company = "Robert Bosch Kft. - Budapest"
+        details = ""
+
+        [[params.jobs.list]]
+        position = "Process Engineer - Trainee"
+        dates = "May 2013 - May 2016"
+        company = "Harman International - Székesfehervar"
+        details = "Quality checking by NI cameras and machine vision. C# programming for product life cycle traceability (SAP). Mitsubishi Robot and PLC programming for product maunfacturing and assembly"
+
+        [[params.jobs.list]]
+        position = "Teaching Assistant"
+        dates = "Sep 2013 - Feb 2014"
+        company = "Budapest University of Technology and Economics"
+        details = "Assisting Optics and Vision Systems laboratory. Helping to set-up classroom equipments, distribute materials and assist with demonstrations. Manage large classes by taking attendance and maintaining order."
+
+    # Projects section
+    [params.projects]
+        enable = false
+        icon = "fa-archive"
+        title = "Projects"
+        intro = "**You can list your side projects or open source libraries in this section.** Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ligula in nunc bibendum fringilla a eu lectus"
+
+        [[params.projects.list]]
+        title = "Hugrid"
+        gh_repository_url = "aerohub/hugrid"
+        tagline = "Grid theme for Hugo. It's a kind of boilerplate to perform anyone or anything quickly. Portfolio, collection, bookmarks, contacts and so on"
+
+    # Skills section
+    [params.skills]
+        enable = true
+        icon = "fa-rocket"
+        title = "Skills & Proficiency"
+
+        [[params.skills.list]]
+        skill = "C/C++"
+        level = "95%"
+
+        [[params.skills.list]]
+        skill = "Python"
+        level = "95%"
+
+        [[params.skills.list]]
+        skill = "Linux"
+        level = "75%"
+
+        [[params.skills.list]]
+        skill = "Fusion 360, Blender, 3D modelling"
+        level = "75%"
+
+    # Certificates section
+    [params.certificates]
+        enable = false
+        icon = "fa-certificate"
+        title = "Skills & Proficiency"
+
+        [[params.certificates.list]]
+        title = "AWS Certificate"
+        type = "credly"
+        badgeId = "12345-36b4-497d-b62f-135d6d24531a"
+
+        [[params.certificates.list]]
+        title = "AWS Certificate"
+        type = "credly"
+        badgeId = "ba49dd74-36b4-497d-b62f-135d6d24531a"
+
+        [[params.certificates.list]]
+        title = "Python & Django Certificate"
+        url = "https://wcs.smartdraw.com/certificate/img/certificate-2.jpg?bn=15100111791"
+
+        [[params.certificates.list]]
+        title = "jQuery Certificate"
+        url = "https://wcs.smartdraw.com/certificate/img/certificate-2.jpg?bn=15100111791"
+
+
+    # Footer section
+
+    # The original template is released under the Creative Commons Attribution 3.0 License.
+    # Please keep the original attribution link when using for your own project.
+    # If you'd like to use the template without the attribution,
+    # you can check out other license options via template author's website: themes.3rdwavemedia.com
+    #
+    # As for Hugo port you may rewrite the "Ported for..." line with setting your name below.
+
+    [params.footer]
+        copyright = ""
