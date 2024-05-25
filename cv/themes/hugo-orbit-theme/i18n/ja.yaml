@@ -1,0 +1,20 @@
+- id: education
+  translation: 学歴
+- id: experiences
+  translation: 経歴
+- id: interests
+  translation: 趣味
+- id: language
+  translation: 言語能力
+- id: projects
+  translation: プロジェクト
+- id: skills
+  translation: 技術 & 熟練度
+- id: certificates
+  translation: コースと証明書
+- id: summary
+  translation: 紹介
+- id: references
+  translation: 仕事の参照
+- id: downloads
+  translation: ダウンロード
