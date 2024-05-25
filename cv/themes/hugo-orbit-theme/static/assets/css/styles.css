@@ -44,7 +44,7 @@ p {
 }
 .wrapper {
   background: #42A8C0;
-  background: linear-gradient(180deg, #235667 0%, #42A8C0 20%, #42A8C0 100%);
+  background: linear-gradient(180deg, #1d4653 0%, #337381 20%, #407683 100%);
   max-width: 960px;
   margin: 0 auto;
   position: relative;
@@ -54,7 +54,7 @@ p {
 }
 .sidebar-wrapper {
   background: #42A8C0;
-  background: linear-gradient(180deg, #235667 0%, #42A8C0 20%, #42A8C0 100%);
+  background: linear-gradient(180deg, #1d4653 0%, #337381 20%, #407683 100%);
   position: absolute;
   right: 0;
   width: 240px;
@@ -71,17 +71,17 @@ p {
   color: #fff;
 }
 .sidebar-wrapper .profile-container .img-circle {
-  width: 100%;
+  width: 75%;
 }
 .sidebar-wrapper .name {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 900;
   margin-top: 0;
   margin-bottom: 10px;
 }
 .sidebar-wrapper .tagline {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 0;
@@ -177,7 +177,7 @@ p {
   margin-bottom: 0;
 }
 .sidebar-wrapper .small-hr {
-  width: 60%;
+  width: 80%;
   margin: 1rem 0 3rem 2rem;
 }
 .main-wrapper {
@@ -387,7 +387,7 @@ p {
 }
 .headline {
   border-bottom-style: double;
-  border-bottom-color: #42A8C0;
+  border-bottom-color: #1d4653;
   width: 90%;
   margin: -20px auto 25px auto;
   padding-bottom: 3px;
