@@ -144,7 +144,7 @@ disable404 = true
         [[params.downloads.list]]
         name = "CV / Resume"
         icon = "fa-file-pdf-o"
-        filepath = "path/resume.pdf"
+        filepath = "gergo-nochta-cv.pdf"
 
 
 # Main body sections
@@ -238,7 +238,7 @@ disable404 = true
 
         [[params.others.list]]
         title="Teaching experience"
-        details="- 3 years experience as an internal instructor - **Version controlt with Git on basic and advanced level**."
+        details="- 3 years experience as an internal instructor - **Version control with Git on basic and advanced level**."
 
     # Certificates section
     [params.certificates]
