@@ -2,5 +2,8 @@
     "name": "hugo",
     "build": {
         "dockerfile": "Dockerfile"
-    }
+    },
+    "mounts": [
+        "type=bind,source=${localEnv:HOME}/.ssh,target=/root/.ssh,readonly",
+    ]
 }
