@@ -31,6 +31,10 @@
 	    {{ partial "skills.html" . }}
     {{ end }}
 
+    {{ if .Site.Params.others.enable }}
+        {{ partial "others.html" . }}
+    {{ end }}
+
     {{ if .Site.Params.certificates.enable }}
 	    {{ partial "certificates.html" . }}
     {{ end }}

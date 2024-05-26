@@ -130,7 +130,7 @@ disable404 = true
         interest = "3D printing"
 
         [[params.interests.list]]
-        interest = "Drones"
+        interest = "Laser engraving"
 
         [[params.interests.list]]
         interest = "Workout, running"
@@ -225,6 +225,20 @@ disable404 = true
         [[params.skills.list]]
         skill = "Fusion 360, Blender, 3D modelling"
         level = "75%"
+
+    # Others section
+    [params.others]
+        enable = true
+        icon = "fa-star"
+        title = "Others"
+
+        [[params.others.list]]
+        title="Soft skills"
+        details="- Willingness to accept feedbacks\n - Result-orientation\n - Developing others (teaching experience)\n - Teamwork and collaboration"
+
+        [[params.others.list]]
+        title="Teaching experience"
+        details="- 3 years experience as an internal instructor - **Version controlt with Git on basic and advanced level**."
 
     # Certificates section
     [params.certificates]
