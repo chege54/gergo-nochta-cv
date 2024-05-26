@@ -112,18 +112,13 @@ disable404 = true
 
     # References section
     [params.references]
-        enable = false
+        enable = true
         title = "References"
 
         [[params.references.list]]
-        name = "Contact Name"
-        email = "contact@gmail.com"
-        phone = "+00 000 0000000"
-
-        [[params.references.list]]
-        name = "Contact Name"
-        email = "contact@gmail.com"
-        phone = "+00 000 0000000"
+        name = "Dr. Attila Sándor Kazsoki (SANDECTRIC Kft.)"
+        email = "kazsokiattila@gmail.com"
+        #phone = "+00 000 0000000"
 
 
     # Interests section
@@ -170,22 +165,28 @@ disable404 = true
         title = "Experiences"
 
         [[params.jobs.list]]
-        position = "Software Engineer, Architect"
-        dates = "May 2016 - present"
+        position = "Software Architect"
+        dates = "2022 - present"
         company = "Robert Bosch Kft. - Budapest"
-        details = ""
+        details = "- Continuously improve developer experiences, tools, and techniques to improve productivity (Docker), code quality by implementing CX quality gates, and team collaboration (Jira/agile).\n - SW packaging and integration (Conan/CMake, Make)\n - Automate release process and changelog generation.\n - Repository structure manitanace and cleanup.\n - Resource optimalizaton, profiling SW with Valgrind, gdb.\n - Part of the DevOps team with focus on CI/CT.\n- CI improvements (code-coverage/sanitizers/static analysis/build speed-up).\n - Continuously inform developers about the current KPIs and quality goals.\n"
+
+        [[params.jobs.list]]
+        position = "Software Engineer"
+        dates = "May 2016 - 2022"
+        company = "Robert Bosch Kft. - Budapest"
+        details = "- Developing high performance driver assistance C++ applications.\n - Follow waterfall-modell during development.\n - Implement C++ unit-tests (GTest) for existing and newly developed code.\n - Writing scripts to visualize and analyze performances (KPIs) in Python (matplotlib, pandas).\n - Bug-fixing and measurement analysis from from real traffic situations (Vector vsignalyzer).\n - Resimulation and verification of code changes and improvements.\n"
 
         [[params.jobs.list]]
         position = "Process Engineer - Trainee"
         dates = "May 2013 - May 2016"
         company = "Harman International - Székesfehervar"
-        details = "Quality checking by NI cameras and machine vision. C# programming for product life cycle traceability (SAP). Mitsubishi Robot and PLC programming for product maunfacturing and assembly"
+        details = "- Quality checking by NI cameras and machine vision.\n - C# programming for product life cycle traceability (SAP).\n - Mitsubishi Robot and PLC programming for product maunfacturing and assembly."
 
         [[params.jobs.list]]
         position = "Teaching Assistant"
         dates = "Sep 2013 - Feb 2014"
         company = "Budapest University of Technology and Economics"
-        details = "Assisting Optics and Vision Systems laboratory. Helping to set-up classroom equipments, distribute materials and assist with demonstrations. Manage large classes by taking attendance and maintaining order."
+        details = "- Assisting Optics and Vision Systems laboratory.\n - Helping to set-up classroom equipments, distribute materials and assist with demonstrations.\n - Manage large classes by taking attendance and maintaining order."
 
     # Projects section
     [params.projects]
@@ -204,6 +205,10 @@ disable404 = true
         enable = true
         icon = "fa-rocket"
         title = "Skills & Proficiency"
+
+        [[params.skills.list]]
+        skill = "Git"
+        level = "100%"
 
         [[params.skills.list]]
         skill = "C/C++"
