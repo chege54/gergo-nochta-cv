@@ -275,4 +275,4 @@ disable404 = true
     # As for Hugo port you may rewrite the "Ported for..." line with setting your name below.
 
     [params.footer]
-        copyright = ""
+        copyright = "Gergo Nochta - Budapest"
