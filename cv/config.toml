@@ -6,7 +6,6 @@ title = "Gergo Nochta curriculum vitae"
 theme = "themes/hugo-orbit-theme"
 themesDir = "."
 staticDir = "static"
-googleAnalytics = "G-MVXVRNWB7F"
 
 # Do not build files for websites. Need them? Set to false
 disableRSS = true
@@ -18,6 +17,7 @@ disable404 = true
 # Meta
     description = "Gergo Nochta curriculum vitae"
     author = "Gergo Nochta"
+    GoogleAnalyticsID = "G-MVXVRNWB7F"
 
 # Theme styles
 
