@@ -74,7 +74,7 @@ jobs:
           # PDF options as described here:
           #https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagepdfoptions -
           #Needs to be in JSON format, e.g. `{"format": "A4", "pageRanges": "1"}`
-          pdfOptions: '{"format": "A4"}' # optional, default is {}
+          pdfOptions: '{"format": "A4", "margin": {"top": "10mm", "left": "0mm", "right": "0mm", "bottom": "10mm"}, "scale": 0.8}' # optional, default is {}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
