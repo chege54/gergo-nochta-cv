@@ -6,7 +6,7 @@ title = "Gergo Nochta curriculum vitae"
 theme = "themes/hugo-orbit-theme"
 themesDir = "."
 staticDir = "static"
-googleAnalytics = "UA-XXXXXXX-Y"
+googleAnalytics = "G-MVXVRNWB7F"
 
 # Do not build files for websites. Need them? Set to false
 disableRSS = true
