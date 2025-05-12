@@ -1,0 +1,83 @@
+# {{ resume.Profile[0].FirstName }} {{ resume.Profile[0].LastName }}
+**{{ resume.Profile[0].Headline }}**  
+{{ resume.Profile[0].GeoLocation }} {{ resume.Profile[0].Address }}
+{%- for email in resume.EmailAddresses -%}
+{% if email.Primary == "Yes" %}
+| {{ email.EmailAddress }}
+{% endif %}
+{%- endfor -%}
+{% if resume.Profile[0].Telephone == Yes %}
+| {{ resume.Profile[0].Telephone }}
+{% endif %}
+
+---
+
+## 🧠 Summary
+
+{{ resume.Profile[0].Summary }}
+
+---
+
+## 💼 Experience
+
+{% for job in resume.experiences %}
+### {{ job.title }} at {{ job.companyName }}
+*{{ job.timePeriod.startDate.year }}{% if job.timePeriod.endDate %} - {{ job.timePeriod.endDate.year }}{% else %} - Present{% endif %} | {{ job.location }}*
+
+{{ job.description | replace('\n', '\n') }}
+
+{% endfor %}
+
+---
+
+## 🎓 Education
+
+{% for edu in resume.education %}
+### {{ edu.schoolName }}
+**{{ edu.degreeName | default('') }}{{ ", " + edu.fieldOfStudy if edu.fieldOfStudy else "" }}**
+
+*{{ edu.timePeriod.startDate.year }} - {{ edu.timePeriod.endDate.year if edu.timePeriod.endDate else "Present" }}*
+
+{% if edu.notes %}{{ edu.notes }}{% endif %}
+{% endfor %}
+
+---
+
+## 🛠 Skills
+
+{% for skill in resume.skills %}
+- {{ skill.name }}
+{% endfor %}
+
+---
+
+## 🌍 Languages
+
+{% for lang in resume.languages %}
+- {{ lang.name }}{% if lang.proficiency %}: {{ lang.proficiency }}{% endif %}
+{% endfor %}
+
+---
+
+## 🏆 Certifications
+
+{% for cert in resume.certifications %}
+### {{ cert.name }}
+**Issued by {{ cert.authority.name }}{% if cert.timePeriod %} in {{ cert.timePeriod.startDate.year }}{% endif %}**
+
+{% endfor %}
+
+---
+
+## 📂 Projects
+
+{% for project in resume.projects %}
+### {{ project.title }}
+{{ project.description }}
+
+{% if project.url %}[Project Link]({{ project.url }}){% endif %}
+
+{% endfor %}
+
+---
+
