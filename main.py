@@ -1,6 +1,8 @@
 import csv
 from jinja2 import Environment, FileSystemLoader
 from pathlib import Path
+import argparse
+import base64
 
 INPUT_FILES = [   
     'Education.csv',
@@ -36,6 +38,21 @@ class Resume:
     
 if __name__ == "__main__":
     
+    parser = argparse.ArgumentParser(description="Process folder and an image file.")
+
+    parser.add_argument(
+        '--folder',
+        required=True,
+        help="Path of the export"
+    )
+
+    # TODO: check file is valid
+    parser.add_argument(
+        '--image',
+        required=True,
+        help="Path to an existing image file (.png, .jpg, .jpeg, .bmp, .tiff, .gif)"
+    )
+    
     # Collect data from exported CSVs
     resume = Resume()
     for file_name in INPUT_FILES:
@@ -43,7 +60,7 @@ if __name__ == "__main__":
         resume.update_resume_data(file_path)
     
     # Jinja2 rendering
-    env = Environment(loader=FileSystemLoader('.'))
+    env = Environment(loader=FileSystemLoader('.'),  trim_blocks=True, lstrip_blocks=True)
     template = env.get_template('markdown.jinja')
 
     output = template.render(resume=resume.data)
