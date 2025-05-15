@@ -1,4 +1,3 @@
-from jinja2 import Environment, FileSystemLoader
 import argparse
 from base64_encode import encode_image_to_base64
 from resume import collect_resume_data
@@ -10,11 +9,11 @@ import shutil
 
 
 def get_output_folder() -> Path:
-    output_folder = Path(os.getcwd()).joinpath("output")
-    if os.path.exists(output_folder):
-        shutil.rmtree(output_folder)
-    os.makedirs(output_folder)
-    return output_folder
+    folder = Path(os.getcwd()).joinpath("output")
+    if folder.exists():
+        shutil.rmtree(folder)
+    folder.mkdir(parents=True, exist_ok=True)
+    return folder
 
 
 if __name__ == "__main__":
