@@ -4,12 +4,18 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+
         {
-            "name": "main.py",
+            "name": "render_markdown.py",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/main.py",
+            "program": "${workspaceFolder}/render_resume/render_markdown.py",
+            "args": [
+                "--folder",
+                "${workspaceFolder}/cv/Basic_LinkedInDataExport_05-12-2025",
+                "--image",
+                "${workspaceFolder}/cv/profile1.jpg",
+            ],
             "console": "integratedTerminal",
             "jinja": true,
             "justMyCode": true

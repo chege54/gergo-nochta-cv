@@ -1,4 +1,4 @@
-# {{ resume.Profile[0].FirstName }} {{ resume.Profile[0].LastName }} <img src="cv/profile.jpg" alt="profile" style="float: right;" width="100" >
+# {{ resume.Profile[0].FirstName }} {{ resume.Profile[0].LastName }} <img src="data:image;base64,{{ profile_image_b64 }}" alt="ProfilePicture" style="float: right;" width="100" >
 **{{ resume.Profile[0].Headline }}**  
 {{ resume.Profile[0].GeoLocation }}, {{ resume.Profile[0].Address }}  
 {% for email in resume.EmailAddresses %}
