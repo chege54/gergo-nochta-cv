@@ -6,15 +6,15 @@
     "configurations": [
 
         {
-            "name": "render_markdown.py",
+            "name": "main.py",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/render_resume/render_markdown.py",
+            "program": "${workspaceFolder}/render_resume/main.py",
             "args": [
                 "--folder",
                 "${workspaceFolder}/linkedin_export/Basic_LinkedInDataExport_05-12-2025",
                 "--image",
-                "${workspaceFolder}/linkedin_export/profile1.jpg",
+                "${workspaceFolder}/linkedin_export/profile.jpg",
             ],
             "console": "integratedTerminal",
             "jinja": true,
