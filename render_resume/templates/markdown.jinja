@@ -1,24 +1,27 @@
-# {{ resume.Profile[0].FirstName }} {{ resume.Profile[0].LastName }}  <img src="data:image;base64,{{ profile_image_b64 }}" alt="ProfilePicture" style="float: right;" width="100" >
+# {{ resume.Profile[0].FirstName }} {{ resume.Profile[0].LastName }}  <img src="{{ profile_image }}" alt="ProfilePicture" style="float: right;" width="100" >  
 **{{ resume.Profile[0].Headline }}**  
-{{ resume.Profile[0].GeoLocation }}, {{ resume.Profile[0].Address }}  
+{{ resume.Profile[0].Address }}  
 {% for email in resume.EmailAddresses %}
-{{ email.EmailAddress }}{{", " if not loop.last else "  " -}}
+{{"E-mail: " if loop.first }}{{ email.EmailAddress }}{{", " if not loop.last else "  "}}
 {% endfor %}
-{% if resume.Profile[0].Telephone is defined %}
-{{ resume.Profile[0].Telephone }}  
-{% endif %}
-{% if resume.Profile[0].Summary %}
-{{ resume.Profile[0].Summary }}  
-{% endif %}
+{% for phone in resume.PhoneNumbers %}
+{{"Tel: " if loop.first }}{{ phone.Number }}{{", " if not loop.last else "  "}}
+{% endfor %}
 
 
 ---
 
 
-{% if resume.ProfileSummary | length > 0 %}
+{% if resume.ProfileSummary | length > 0 or resume.Profile[0].Summary | length > 0 %}
 ## Summary
 
-{{ resume.Profile[0].Summary }}
+{% if resume.ProfileSummary | length > 0 %}
+{{ resume.ProfileSummary }}  
+{% endif %}
+
+{% if resume.Profile[0].Summary | length > 0 %}
+{{ resume.Profile[0].Summary }}  
+{% endif %}
 
 {% endif %}
 
@@ -38,7 +41,7 @@
 
 ### {{ edu.DegreeName }} at {{ edu.SchoolName }}
 
-*{{ edu.StartDate }} - {{ edu.EndDate if edu.EndDate else "Present" }}*
+*{{ edu.StartDate }} - {{ edu.EndDate if edu.EndDate else "Present" }}*  
 {% if edu.Notes %}{{ edu.Notes }}{% endif %}
 
 {% endfor %}

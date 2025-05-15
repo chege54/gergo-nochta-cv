@@ -12,7 +12,7 @@
             "program": "${workspaceFolder}/render_resume/main.py",
             "args": [
                 "--folder",
-                "${workspaceFolder}/linkedin_export/Basic_LinkedInDataExport_05-12-2025",
+                "${workspaceFolder}/linkedin_export/Basic_LinkedInDataExport",
                 "--image",
                 "${workspaceFolder}/linkedin_export/profile.jpg",
             ],

@@ -20,12 +20,13 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(
         description="Process folder and an image file.")
+
     parser.add_argument(
         '--folder',
         required=True,
         help="Path of the export"
     )
-    # TODO: check file is valid
+
     parser.add_argument(
         '--image',
         required=True,
@@ -36,14 +37,22 @@ if __name__ == "__main__":
     output_folder = get_output_folder()
 
     # Encode image for embedding
-    profile_image_b64 = encode_image_to_base64(args.image)
+    # profile_image_b64 = encode_image_to_base64(args.image)
+    input_image_path = Path(args.image)
+    if input_image_path.exists() and input_image_path.suffix in [".png", ".jpg", ".jpeg", ".bmp", ".tiff", ".webp"]:
+        profile_image_name = "profile" + input_image_path.suffix
+        profile_image_path = Path(shutil.copyfile(
+            input_image_path, output_folder.joinpath(profile_image_name)))
+    else:
+        print(f"Given {input_image_path} not found of not supported format!")
+        profile_image_name = ""
 
     # Collect data from exported CSVs
     resume_data = collect_resume_data(args.folder)
 
     # Jinja2 markdown rendering
     md = render_to_markdown(
-        resume_data=resume_data, profile_image_b64=profile_image_b64, output_folder_path=output_folder)
+        resume_data=resume_data, profile_image=profile_image_name, output_folder_path=output_folder)
 
     # HTML rendering
     convert_markdown_to_html(md=md, output_folder_path=output_folder)

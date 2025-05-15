@@ -5,8 +5,9 @@ import os
 INPUT_FILES = [
     'Education.csv',
     'Email Addresses.csv',
-    'Honors.csv',
+    # 'Honors.csv',
     'Languages.csv',
+    'PhoneNumbers.csv',
     'Positions.csv',
     'Profile Summary.csv',
     'Profile.csv',
@@ -29,7 +30,10 @@ class Resume:
         raw = read_csv(file_path)
         sanitized_keys = []
         for r in raw:
-            sanitized_keys.append({k.replace(' ', ''): v for k, v in r.items()})
+            sanitized = {k.replace(' ', ''): v.strip() for k, v in r.items() if v}
+            if sanitized:
+                sanitized_keys.append(sanitized)
+
         file_stem = str(file_path.stem).replace(' ', '')
         self.data.update({ f"{file_stem}" : sanitized_keys })
 
