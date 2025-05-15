@@ -12,9 +12,9 @@
             "program": "${workspaceFolder}/render_resume/render_markdown.py",
             "args": [
                 "--folder",
-                "${workspaceFolder}/cv/Basic_LinkedInDataExport_05-12-2025",
+                "${workspaceFolder}/linkedin_export/Basic_LinkedInDataExport_05-12-2025",
                 "--image",
-                "${workspaceFolder}/cv/profile1.jpg",
+                "${workspaceFolder}/linkedin_export/profile1.jpg",
             ],
             "console": "integratedTerminal",
             "jinja": true,
