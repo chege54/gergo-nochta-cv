@@ -43,7 +43,7 @@ jobs:
           pip install -r ${{github.workspace}}/requirements.txt
       - name: Render to Markdown
         run: |
-          python ${{github.workspace}}/render_resume/render_markdown.py --folder ${{github.workspace}}/cv/Basic_LinkedInDataExport_05-12-2025" --image ${{github.workspace}}/cv/profile1.jpg
+          python ${{github.workspace}}/render_resume/render_markdown.py --folder ${{github.workspace}}/linkedin_export/Basic_LinkedInDataExport_05-12-2025 --image ${{github.workspace}}/linkedin_export/profile1.jpg
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
